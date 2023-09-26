@@ -70,10 +70,10 @@ function initialize()
 	arToolkitSource = new THREEx.ArToolkitSource({
 		sourceType : 'webcam',
 	});
-	document.addEventListener('touchstart', function() {
-  var video = document.getElementById('video');
-  video.play();
-});
+// 	document.addEventListener('touchstart', function() {
+//   var video = document.getElementById('video');
+//   video.play();
+// });
 	function onResize()
 	{
 		arToolkitSource.onResize()	
@@ -98,10 +98,10 @@ function initialize()
 	// setup arToolkitContext
 	////////////////////////////////////////////////////////////	
 
-	document.addEventListener('click', function(){
-    let video = document.getElementById('video');
-    video.play();
-});
+// 	document.addEventListener('click', function(){
+//     let video = document.getElementById('video');
+//     video.play();
+// });
 	// create atToolkitContext
 	arToolkitContext = new THREEx.ArToolkitContext({
 		cameraParametersUrl: 'data/camera_para.dat',
