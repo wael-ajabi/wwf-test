@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0,initial-scale=1.0, maximum-scale=1.0">
 	<title>Hello, world!</title>
 	<!-- include three.js library -->
 	<script src='js/three.js'></script>
@@ -70,7 +70,10 @@ function initialize()
 	arToolkitSource = new THREEx.ArToolkitSource({
 		sourceType : 'webcam',
 	});
-
+	document.addEventListener('touchstart', function() {
+  var video = document.getElementById('video');
+  video.play();
+});
 	function onResize()
 	{
 		arToolkitSource.onResize()	
