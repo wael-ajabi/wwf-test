@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-	<title>WWF demo</title>
+	<title>Hello, world!</title>
 	<!-- include three.js library -->
 	<script src='js/three.js'></script>
 	<!-- include jsartookit -->
@@ -134,22 +134,11 @@ function initialize()
 
 function update()
 {
-    // update artoolkit on every frame
-    if ( arToolkitSource.ready !== false )
-        arToolkitContext.update( arToolkitSource.domElement );
-
-    let video = document.getElementById('video');
-
-    if(markerRoot1.visible) {
-        if(video.paused) {
-            video.play();
-        }
-    } else {
-        if(!video.paused) {
-            video.pause();
-        }
-    }
+	// update artoolkit on every frame
+	if ( arToolkitSource.ready !== false )
+		arToolkitContext.update( arToolkitSource.domElement );
 }
+
 function render()
 {
 	renderer.render( scene, camera );
