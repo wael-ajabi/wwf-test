@@ -95,6 +95,10 @@ function initialize()
 	// setup arToolkitContext
 	////////////////////////////////////////////////////////////	
 
+	document.addEventListener('click', function(){
+    let video = document.getElementById('video');
+    video.play();
+});
 	// create atToolkitContext
 	arToolkitContext = new THREEx.ArToolkitContext({
 		cameraParametersUrl: 'data/camera_para.dat',
